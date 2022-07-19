@@ -20,10 +20,16 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    // 👇 非严格匹配，/my-page/* 都指向 MyPage 页面
-    path: "/my-page/*", // vue-router@4.x path的写法为：'/my-page/:page*'
-    name: "my-page",
-    component: () => import("@/components/child.vue"),
+    // 👇 非严格匹配，/child-vue/* 都指向 MyPage 页面
+    path: "/child-vue/*", // vue-router@4.x path的写法为：'/child-vue/:page*'
+    name: "child-vue",
+    component: () => import("@/components/ChildComponents.vue"),
+    // props() {
+    //   return {
+    //     url: "http://localhost:3000/index.html",
+    //     name: "vue2子应用",
+    //   };
+    // },
   },
 ];
 
