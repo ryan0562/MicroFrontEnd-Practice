@@ -1,5 +1,5 @@
 <template>
-  <micro-app :name="name" :url="url" v-bind="attrs"></micro-app>
+  <micro-app :name="name" :url="url" v-bind="$attrs"></micro-app>
 </template>
 
 <script>

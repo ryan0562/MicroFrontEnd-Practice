@@ -3,7 +3,8 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/child-vue/">子应用vue2</router-link>
+      <router-link to="/child-vue/">子应用vue2</router-link> |
+      <router-link to="/yjzch/">凉山</router-link>
     </nav>
     <router-view />
   </div>

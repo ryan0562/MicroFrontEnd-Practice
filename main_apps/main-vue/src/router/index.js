@@ -27,7 +27,18 @@ const routes = [
     props() {
       return {
         url: "http://localhost:10001/",
-        name: "vue2子应用",
+        name: "vue2_child",
+      };
+    },
+  },
+  {
+    path: "/yjzch/:page*",
+    name: "yjzch",
+    component: () => import("@/components/ChildComponents.vue"),
+    props() {
+      return {
+        url: "http://yjzch.mti-sh.cn/",
+        name: "yjzch",
       };
     },
   },
