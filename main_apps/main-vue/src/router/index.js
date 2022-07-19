@@ -27,7 +27,8 @@ const routes = [
     props() {
       return {
         url: "http://localhost:10001/",
-        name: "vue2_child",
+        name: "child-vue",
+        baseroute: "/child-vue/",
       };
     },
   },
@@ -35,10 +36,21 @@ const routes = [
     path: "/yjzch/:page*",
     name: "yjzch",
     component: () => import("@/components/ChildComponents.vue"),
+    props: {
+      url: "http://yjzch.mti-sh.cn/",
+      name: "yjzch",
+      baseroute: "/yjzch/",
+    },
+  },
+  {
+    path: "/baidu/:page*",
+    name: "baidu",
+    component: () => import("@/components/ChildComponents.vue"),
     props() {
       return {
-        url: "http://yjzch.mti-sh.cn/",
-        name: "yjzch",
+        url: "http://www.baidu.com/",
+        name: "baidu",
+        baseroute: "/baidu/",
       };
     },
   },
