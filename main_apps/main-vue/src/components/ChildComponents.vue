@@ -1,6 +1,5 @@
 <template>
-  <!-- <micro-app :name="name" :url="url" v-bind="attrs"></micro-app> -->
-  <div>111</div>
+  <micro-app :name="name" :url="url" v-bind="attrs"></micro-app>
 </template>
 
 <script>

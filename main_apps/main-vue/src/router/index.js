@@ -21,15 +21,15 @@ const routes = [
   },
   {
     // 👇 非严格匹配，/child-vue/* 都指向 MyPage 页面
-    path: "/child-vue/*", // vue-router@4.x path的写法为：'/child-vue/:page*'
+    path: "/child-vue/:page*", // vue-router@4.x path的写法为：'/child-vue/:page*'
     name: "child-vue",
     component: () => import("@/components/ChildComponents.vue"),
-    // props() {
-    //   return {
-    //     url: "http://localhost:3000/index.html",
-    //     name: "vue2子应用",
-    //   };
-    // },
+    props() {
+      return {
+        url: "http://localhost:10001/",
+        name: "vue2子应用",
+      };
+    },
   },
 ];
 
