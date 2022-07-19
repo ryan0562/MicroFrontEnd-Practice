@@ -48,6 +48,7 @@
       "requireConfigFile": false
     },
     "rules": {
+      "no-unused-vars":"warn"
     }
   },
   "browserslist": [

@@ -5,7 +5,20 @@ import router from "./router";
 import store from "./store";
 
 import microApp from "@micro-zoe/micro-app";
-microApp.start();
+microApp.start({
+  plugins: {
+    modules: {
+      "child-vue": [
+        {
+          loader(code, url) {
+            code = code.replace("var xx_dll=", "window.xx_dll=");
+            return code;
+          },
+        },
+      ],
+    },
+  },
+});
 
 Vue.config.productionTip = false;
 

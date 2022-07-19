@@ -54,6 +54,31 @@ const routes = [
       };
     },
   },
+  {
+    path: "/react17/:page*",
+    name: "react17",
+    component: () => import("@/components/ChildComponents.vue"),
+    props() {
+      return {
+        url: "http://www.micro-zoe.com/child/react17/",
+        name: "react17",
+        baseroute: "/react17/",
+      };
+    },
+  },
+  {
+    path: "/SDF/:page*",
+    name: "SDF",
+    component: () => import("@/components/ChildComponents.vue"),
+    props() {
+      return {
+        url: "http://10.168.4.210/",
+        name: "SDF",
+        baseroute: "/SDF/",
+        class: "child_SDF",
+      };
+    },
+  },
 ];
 
 const router = new VueRouter({
