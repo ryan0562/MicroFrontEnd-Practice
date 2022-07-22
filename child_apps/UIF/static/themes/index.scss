@@ -1,0 +1,57 @@
+@import './css/themes-config.scss';
+
+@mixin mixin($type, $colors){
+  $len: 0 !default;
+  @if length($colors) > length($themeList){
+    $len:length($themeList)
+  }@else{
+    $len:length($colors)
+  }
+  @for $i from 1 through $len{
+    $item: nth($themeList, $i);
+    $color: nth($colors, $i);
+    [data-theme=#{$item}] & {
+      #{$type}:$color;
+    }
+  }
+}
+// @import './css/variables.scss';
+@mixin mixColor($color, $reColor){/*通过该函数设置字体颜色，后期方便统一管理；*/
+  color:$color;
+  [data-theme="dark"] & {
+    color:$reColor;
+  }
+}
+@mixin mixBgColor($color, $reColor){/*通过该函数设置字体颜色，后期方便统一管理；*/
+  background-color:$color;
+  [data-theme="dark"] & {
+    background-color:$reColor;
+  }
+}
+// @mixin mixBrColor($color, $reColor){/*通过该函数设置字体颜色，后期方便统一管理；*/
+//   border-color:$color;
+//   [data-theme="dark"] & {
+//     border-color:$reColor;
+//   }
+// }
+// @mixin mixBgImg($img, $reImg){/*通过该函数设置字体颜色，后期方便统一管理；*/
+//   background-image:$img;
+//   [data-theme="dark"] & {
+//     background-image:$reImg;
+//   }
+// }
+// @mixin mixBgAll($all, $reAll){/*通过该函数设置字体颜色，后期方便统一管理；*/
+//   background:$all;
+//   [data-theme="dark"] & {
+//     background:$reAll;
+//   }
+// }
+// @mixin mixBrAll($all, $reAll){/*通过该函数设置字体颜色，后期方便统一管理；*/
+//   border:$all;
+//   [data-theme="dark"] & {
+//     border:$reAll;
+//   }
+// }
+// // @include mixColor($primary, $primary-dark);
+// // @include mixBgColor($bg-primary, $bg-primary-dark);
+// // @include mixBrColor($br-primary, $br-primary-dark);

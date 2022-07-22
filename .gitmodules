@@ -1,0 +1,3 @@
+[submodule "child_apps/web"]
+	path = child_apps/web
+	url = git@10.168.4.24:mti-project/lszyqjslfh/web.git

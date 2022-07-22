@@ -1,0 +1,233 @@
+.passwordPopus {
+  background: #033950 !important;
+  width: 100px;
+  .el-dropdown-menu__item {
+    color: white;
+    &:hover {
+      background: #064F6E;
+    }
+  }
+}
+.topbar{
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  // @include mixin(background-image, ($topbar-img) ($topbar-img));
+  // background-repeat: no-repeat;
+  // background-size: 110% 70%;
+  // background-position: top center;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 70px 70px #043646; //#043646
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 90px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    @include mixin(background-image, ($topbar-img) ($topbar-img));
+    background-position: top center;
+    background-size: auto 80%;
+    z-index: -1;
+  }
+  &.bigScreen {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 90px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      @include mixin(background-image, ($topbar-img-big) ($topbar-img-big));
+      background-position: top center;
+      background-size: contain;
+      z-index: -1;
+    }
+    .bar-center {
+      width: 1400px;
+    }
+    .bar-left, .bar-right {
+      width:calc((100% - 1400px) / 2);
+    }
+  }
+  &.hide{
+    top:-1000px;
+  }
+  .bar-center{
+    float: left;
+    width: 715px;
+    height: 90px;
+    position: relative;
+    z-index: 1;
+    // background-repeat: no-repeat;
+    // background-position: 0 0;
+    // background-size:623px 90px;
+    // @include mixin(background-image, ($topbar-center-img) ($topbar-center-img-dark));
+    
+  }
+  .bar-left, .bar-right{
+    // @include mixin(background-image, ($topbar-center-img) ($topbar-center-img-dark));
+    // background-position: 0 0;
+    // background-repeat:repeat-x;
+    // background-size:100% 100%;
+    float: left;
+    width:calc((100% - 715px) / 2);
+    height: 90px;
+    padding: 0 5x;
+    font-size: 16px;
+    @include mixin(color, ($text-topbar-title) ($text-topbar-title-dark));
+  }
+  .bar-right{
+    padding-top: 8px;
+    padding-right: 20px;
+    // @include mixin(background-image, ($topbar-bg-img) ($topbar-bg-img-dark));
+    text-align: right;
+    position: absolute;
+    right: 0;
+    img {
+      height: 28px;
+      width: 28px;
+    }
+    .date-time, .wea_day_img, span{
+      vertical-align: middle;
+      display: inline-block;
+      cursor: pointer;
+      margin: 0px 2px;
+      line-height: 32px;
+      @include mixin(color, ($white) ($white));
+      &.iconfont {
+        color: #B6EFFA;
+      }
+      &.weather {
+        @include mixin(color, ($white) ($white));
+      }
+      &.time{
+        cursor:default;
+      }
+      &.col{
+        width: 1px;
+        height: 16px;
+        margin: 0 5px;
+        background-color: $state-8;
+      }
+      &.icon-dial{
+        font-size: 22px;
+      }
+    }
+  }
+  .bar-left{
+    padding-left: 20px;
+    // @include mixin(background-image, ($topbar-bg-img) ($topbar-bg-img-dark));
+     > ul{
+      left: auto!important;
+      top:auto!important;
+      position: relative!important;
+      display:flex!important;
+      padding-left: 0!important;
+      > li{
+        flex: 1!important;
+        max-width: 120px !important;
+        text-indent: 0!important;
+        background-color: transparent;
+        text-align: center!important;
+        height: 48px!important;
+        line-height: 48px!important;
+        box-shadow: none;
+        border: 0;
+        @include mixin(color, ($state-7) ($state-7));
+        &.cur{
+          @include mixin(background-color, ($bg-highlight) ($bg-highlight-dark));
+        }
+        &:hover{
+          background: linear-gradient(0deg, rgba($color: #0098B8, $alpha: 0.8) 0%, rgba(0, 152, 184, 0) 100%);
+          @include mixin(color, ($white) ($white));
+          // font-weight: 600;
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            background-image: linear-gradient(to right, #0D6E7F 0%, #038A9C 30%, #00EAFF 50%, #038A9C 70%, #0D6E7F 100%);
+            z-index: 1
+          }
+        }
+        > ul{
+          left:0!important;
+          top:48px!important;
+          padding: 10px 0 0;
+        }
+      }
+    }
+  }
+  .title{
+    font-size:38px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-80%);
+    @include mixin(color, ($text-topbar-title) ($text-topbar-title-dark));
+    // @font-face {
+    //   font-family: "title";
+    //   // src: url("~@/../../../../static/iconfont/YouSheBiaoTiHei-2.ttf");
+    //   // src: url-loader("./title.ttf");
+    // }
+    font-family: "title";
+  }
+  .error{
+    color:white;
+    width: 540px;
+    height: 40px;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    background: #ca6264;
+    border: 1px #a94b49 solid;
+    top: 100%;
+    left: 50%;
+    font-size: 18px;
+    margin-left: -270px;
+  }
+}
+.themes-picker{
+  label{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    margin-right: 5px;
+    line-height: 1;
+  }
+  a{
+    display: inline-block;
+    width:16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: top;
+    display: inline-block;
+    background-color:$white;
+    & + a{
+      background-color:$primary-dark;
+    }
+    &.active{
+      @include mixin(border, (2px $primary solid) (2px $dark-1 solid));
+    }
+  }
+}
+.el-popper{
+  margin-top: 0px;
+}

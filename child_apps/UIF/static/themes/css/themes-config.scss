@@ -1,0 +1,154 @@
+$themeList: theme_1 theme_2; // themes数组申明
+//通用
+$white:    #fff !default;
+$black:    #000 !default;
+$transparent:rgba(0,0,0,0)!default;
+//灰度
+$gray-100: mix($white, $black, 10%) !default;
+$gray-200: mix($white, $black, 20%) !default;
+$gray-300: mix($white, $black, 30%) !default;
+$gray-400: mix($white, $black, 40%) !default;
+$gray-500: mix($white, $black, 50%) !default;
+$gray-600: mix($white, $black, 60%) !default;
+$gray-700: mix($white, $black, 70%) !default;
+$gray-800: mix($white, $black, 80%) !default;
+$gray-900: mix($white, $black, 90%) !default;
+
+//颜色
+$color-db:#DBEFFF !default;
+$color-3:#333 !default;
+$color-6:#666 !default;
+$color-9:#999 !default;
+$color-c:#ccc !default;
+$color-d:#ddd !default;
+$color-e:#eee !default;
+$color-f:#F5F7FA !default;
+$color-ac:#ACBDC7 !default;
+$color-cc:#CCE1ED !default;
+$color-dc:#DCF2FF !default;
+$color-ec:#ECEFF1 !default;
+$dark-1:#00ADFE !default;
+$dark-2:#0A71AB !default;
+$dark-3:#1470A8 !default;
+$dark-4:#0A2747 !default;
+$dark-5:#0C4E76 !default;
+$dark-6:#0B253B !default;
+$dark-7:#1188CB !default;
+$dark-8:#0A517D !default;
+$dark-9:#317AA8 !default;
+$dark-10:#00335F !default;
+$dark-11:#0095FE !default;
+$state-1:#DF5733 !default;
+$state-2:#CD9714 !default;
+$state-3:#28CFAE !default;
+$state-4:#427BED !default;
+$state-5:#00FFFF !default;
+$state-6:#42BFED !default;
+$state-7:#B6EFFA !default;
+$state-8:#059AAC !default;
+$state-9:#083644 !default;
+
+$primary:#0063F0 !default;
+$primary-dark:#045294 !default;
+$secondary:#E05B56 !default;
+$secondary-1:#E8ECF6 !default; //辅色-1
+$secondary-2:#E2E7FB !default; //辅色-2
+$secondary-3:#E8A91C  !default; //辅色-3
+$secondary-4:#00CDCD  !default; //辅色-3
+$secondary:#e05b56 !default; //辅色、红
+$tertiary:#eb7832 !default;   //辅色、橙
+$quartus:#f7c93d !default;    //辅色、黄
+$fifthly:#1953ad !default;   //辅色、蓝
+$sextus:#337746 !default;    //辅色、绿
+$seventh:#2B4667 !default;   //辅色、绿
+$eighth: #167101 !default;   //辅色、绿
+$brand:#409EFF!default;
+//文字
+$text-primary:  #333 !default;  //正文颜色
+$text-secondary:  #999 !default; //正文辅色、淡色
+$text-thirdary:  #ccc !default;  //正文辅色、淡色
+
+//背景
+$item-bg-active:rgba(0,99,240,0.05);
+$item-bg-active-dark:rgba(0,173,254,0.15);
+$page-bg:linear-gradient(to top, #fff, #fff) !default;
+$page-bg-dark:linear-gradient(to top, #011626, #062948) !default;
+$icon-bg:linear-gradient(to top, #022041, #00ADFE) !default;
+$ele-bg-dark:linear-gradient(to top, #0F539D, #03254B) !default;
+$icon-bg-active:linear-gradient(to top, #0063F0, #0063F0) !default;
+$icon-bg-active-dark:linear-gradient(180deg,rgba(232,169,28,1),rgba(232,169,28,0.5)) !default;
+$bg-primary: #F1F1F1 !default;
+$bg-primary-dark: #000 !default;
+$bg-secondary: #E7F5FF !default;
+$bg-secondary-dark: #000 !default;
+$bg-thirdary: #F8F8F8 !default;
+$bg-thirdary-dark: #000 !default;
+$bg-fourdary: #F5F5F5 !default;
+$bg-fifthly: #BEE4FD !default;
+$bg-fifthly-dark: #000 !default;
+$bg-sixly: #F2F2F2 !default;
+$bg-sixly-dark: #000 !default;
+$bg-sevenly: #666!default;
+$bg-sevenly-dark: #000!default;
+$bg-eighth: #ECECEC!default;
+$bg-eighth-dark: #000!default;
+$bg-stage-icon:#FFB932!default;
+$bg-tree:#F9F9F9!default;
+
+//边框、分割线
+$br-primary: #ddd !default;
+$br-primary-dark: #ddd !default;
+
+//top-bar
+$text-topbar-title:$white !default;
+$text-topbar-title-dark:$white !default;
+
+//私有
+$nav-bg-dark:#0B3A63 !default;
+$nav-br-dark: #118DD3 !default;
+$bg-highlight:#0D76FE!default;
+$bg-highlight-dark:#1771B1!default;
+$dark-99:#053C6B !default;
+$dark-98:#01223B !default;
+
+
+// $topbar-img:url(~@/assets/images/bg_topbar.png) !default;
+// $topbar-img-big:url(~@/assets/images/bg_topbar2.png) !default;
+$topbar-img:url(~@/assets/images/top_1920.png) !default;
+$topbar-img-big:url(~@/assets/images/top_3840.png) !default;
+$topbar-center-img:url(~@/assets/images/topbar_center.png) !default;
+$topbar-center-img-dark:url(~@/assets/images/topbar_center_dark.png) !default;
+
+$topbar-bg-img:url(~@/assets/images/topbar_bg.png) !default;
+$topbar-bg-img-dark:url(~@/assets/images/topbar_bg_dark.png) !default;
+
+
+$stage-item-img:url(~@/assets/images/stage_item.png);
+$stage-item-img-dark:url(~@/assets/images/stage_item_dark.png);
+$stage-item-img-active:url(~@/assets/images/stage_item_active.png);
+$stage-item-img-active-dark:url(~@/assets/images/stage_item_active.png);
+$stage-bar-img:url(~@/assets/images/stage_bar.png);
+$stage-bar-img-dark:url(~@/assets/images/stage_bar_dark.png);
+
+$stage-subitem-img:url(~@/assets/images/stage_subitem.png);
+$stage-subitem-img-dark:url(~@/assets/images/stage_subitem_dark.png);
+$stage-subitem-img-active:url(~@/assets/images/stage_subitem_active.png);
+$stage-subitem-img-active-dark:url(~@/assets/images/stage_subitem_active.png);
+
+$stage-bg-img-center:url(~@/assets/images/stage_bg.png);
+$stage-bg-img-center-dark:url(~@/assets/images/stage_bg.png);
+$stage-bg-img-left:url(~@/assets/images/stage_bgl.png);
+$stage-bg-img-right:url(~@/assets/images/stage_bgr.png);
+
+$no-data:url(~@/assets/images/nodata.png);
+$no-data-dark:url(~@/assets/images/nodata_dark.png);
+
+$mess-icon:url(~@/assets/images/icon_mess.png);
+$mess-icon-active:url(~@/assets/images/icon_mess_active.png);
+
+$success:     #28a745 !default;
+$info:        #17a2b8 !default;
+$warning:     #fd9f3e !default;
+$danger:      #dc3545 !default;
+$light:       $gray-100 !default;
+$dark:        $gray-800 !default;

@@ -1,0 +1,17 @@
+
+    .ccb {
+        animation: roll 2s linear infinite;
+    }
+    .loading{
+    	top:0;
+    	left:0;
+    }
+    @keyframes roll {
+        form {
+            transform: rotateZ(0deg)
+        }
+        to {
+            transform: rotateZ(360deg)
+        }
+    }
+    

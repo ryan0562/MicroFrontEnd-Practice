@@ -33,13 +33,16 @@ const routes = [
     },
   },
   {
-    path: "/yjzch/:page*",
-    name: "yjzch",
+    path: "/UIF/:page*",
+    name: "UIF",
     component: () => import("@/components/ChildComponents.vue"),
     props: {
-      url: "http://yjzch.mti-sh.cn/",
-      name: "yjzch",
-      baseroute: "/yjzch/",
+      url: "http://localhost:8888/",
+      name: "UIF",
+      baseroute: "/UIF/",
+      disableSandbox: true,
+      // shadowDOM: true,
+      inline: true,
     },
   },
   {
